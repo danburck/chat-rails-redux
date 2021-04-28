@@ -7,11 +7,9 @@ import Message from '../components/message';
 import MessageForm from '../containers/message_form';
 
 class MessageList extends Component {
-  componentWillMount() {
-    this.fetchMessages();
-  }
 
   componentDidMount() {
+    this.fetchMessages();
     // this.refresher = setInterval(this.fetchMessages, 5000);
   }
 
@@ -40,7 +38,7 @@ class MessageList extends Component {
             })
           }
         </div>
-        <MessageForm />
+        <MessageForm selectedChannel={this.props.selectChannel}/>
       </div>
     );
   }
@@ -49,7 +47,6 @@ class MessageList extends Component {
 function mapStateToProps(state) {
   return {
     messages: state.messages,
-    selectedChannel: state.selectedChannel
   };
 }
 
