@@ -38,7 +38,7 @@ class MessageList extends Component {
             })
           }
         </div>
-        <MessageForm selectedChannel={this.props.selectChannel}/>
+        <MessageForm selectedChannel={this.props.selectedChannel}/>
       </div>
     );
   }
